@@ -1,4 +1,4 @@
-import SummaryTool, { SUMMARY_SETTINGS } from "main";
+import SummaryTool from "./main";
 import {
 	ButtonComponent,
 	DropdownComponent,
