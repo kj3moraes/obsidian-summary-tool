@@ -1,4 +1,5 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin } from 'obsidian';
+import { PluginModal } from "./PluginModal";
 import SettingsView from './SettingsPane';
 
 // Remember to rename these classes and interfaces!
@@ -8,7 +9,7 @@ interface SUMMARY_SETTINGS {
 	token: string | null;
 }
 
-const DEFAULT_SETTINGS: SUMMARY_SETTINGS = {
+export const DEFAULT_SETTINGS: SUMMARY_SETTINGS = {
 	appName: 'summary-tool',
 	token: null,
 }
@@ -23,10 +24,14 @@ export default class SummaryTool extends Plugin {
 		this.settings_view = new SettingsView(this);
 
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice('This is a notice!');
-		});
+		const ribbonIconEl = this.addRibbonIcon(
+			'documents',
+			'Summary Tool',
+			(evt: MouseEvent) => {
+				// Call the modal open function
+				new PluginModal(this).open();
+			}
+		);
 
 		// Perform additional things with the ribbon
 		ribbonIconEl.addClass('my-plugin-ribbon-class');
