@@ -20,5 +20,10 @@
 		"obsidian": "^1.2.8",
 		"tslib": "2.4.0",
 		"typescript": "4.7.4"
+	},
+	"dependencies": {
+		"fluent-ffmpeg": "^2.1.2",
+		"webpack": "^5.82.0",
+		"ytdl-core": "^4.11.4"
 	}
 }
