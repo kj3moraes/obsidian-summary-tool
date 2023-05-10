@@ -6,19 +6,19 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
-.st_plugin-container {
+.st_plugin_container {
 	width: 100%;
 	margin-top: 20px;
 }
 
-.gpt_button-container {
+.st_button_container {
 	display: flex;
 	justify-content: flex-end;
 	gap: 10px;
 	margin-top: 15px;
 }
 
-.st_prompt-field {
+.st_prompt_field {
 	width: 100%;
 	min-height: 100px;
 	padding: 10px;
@@ -31,10 +31,10 @@ If your plugin does not need CSS, delete this file.
     font-size: 16px;
 }
 
-.st_cancel-button {
+.st_cancel_button {
 	background-color: #b33939;
 }
 
-.st_generate-button {
+.st_generate_button {
 	background-color: #218c74;
 }
